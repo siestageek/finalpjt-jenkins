@@ -1,5 +1,9 @@
 # finalpjt-jenkins
 
+```
+ansible-playbook -i ./inventory mariadb.yaml --private-key=/home/clouds/MyKeyPairXX.pem -e ansible_port=12137 --user=ubuntu
+```
+
 ```ini
 DB_USERNAME=parkings
 DB_PASSWORD=parkings
