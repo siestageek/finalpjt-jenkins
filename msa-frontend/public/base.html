@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Parking Discount System</title>
+
+    <!-- Tailwind CSS 호출 -->
+    {#    <link href="{{url_for('static', path='/css/app.css')}}" rel="stylesheet">#}
+    <link href="{{url_for('static', path='/css/app2.css')}}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+{#    <!-- 부트스트랩 -->#}
+{#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">#}
+{#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">#}
+{#    <!-- BootStrap javascript -->#}
+{#    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>#}
+{#    <!-- 통합 CSS -->#}
+    {#    <link rel="stylesheet" href="{{ url_for('static', path='/css/mainPage.css') }}">#}
+
+    <!-- favicon -->
+    {#    <link rel="icon" href="{{ url_for('static', path='/img/logo.png') }}">#}
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+
+    {% block style %} {% endblock %}
+</head>
+<body>
+<div class="all">
+{# {% include 'include/header.html' %} #}
+{% block main %} {% endblock %}
+{#{% include 'include/footer.html' %}#}
+</div>
+{% block script %} {% endblock %}
+</body>
+</html>

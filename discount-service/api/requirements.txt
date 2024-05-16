@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pymysql
+python-multipart
+requests
+starlette
+pydantic
+python-dotenv
+prometheus-fastapi-instrumentator

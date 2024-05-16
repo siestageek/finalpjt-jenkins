@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  frontendapp:
+    build:
+      context: ./git6a_flnalpjct_MSA/msa-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: frontendapp
+
+  couponapp:
+    build:
+      context: ./git6a_flnalpjct_MSA/coupon-service
+      dockerfile: Dockerfile
+    ports:
+      - "8040:8040"
+    container_name: couponapp
+
+  discountapp:
+    build:
+      context: ./git6a_flnalpjct_MSA/discount-service
+      dockerfile: Dockerfile
+    ports:
+      - "8050:8050"
+    container_name: discountapp
+
+  memberapp:
+    build:
+      context: ./git6a_flnalpjct_MSA/member-service
+      dockerfile: Dockerfile
+    ports:
+      - "8030:8030"
+    container_name: memberapp
+
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/index.html:/usr/share/nginx/html/index.html
+    container_name: nginx
+    depends_on:
+      - frontendapp
+      - couponapp
+      - discountapp
+      - memberapp        

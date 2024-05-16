@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello, Python MSA</title>
+</head>
+<body>
+<h1>Hello, Python MSA</h1>
+<h2>할인권 리스트</h2>
+<div id="coupon-list"></div>
+<hr>
+<h2>할인권 등록</h2>
+<form id="cpfrm">
+    <div>차번호 : <input type="text" id="regcno"></div>
+    <div>상품권선택 :
+        <select name="regdisc" id="regdisc">
+            <option value="1시간 무료">1시간 무료</option>
+            <option value="2시간 무료">2시간 무료</option>
+            <option value="완전 무료">완전 무료</option>
+        </select>
+    </div>
+    <div><button type="button" id="regbtn">등록하기</button></div>
+</form>
+
+<script src="/js/coupon.js"></script>
+</body>
+</html>
