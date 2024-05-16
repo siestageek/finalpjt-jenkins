@@ -167,5 +167,10 @@ VALUES ('123가5678', '10% 할인', '2024-02-01 12:00:00', 'n'),
        ('123가5678','1시간 무료','2024-04-30 13:25:00','y' ),
        ('123가5678','1시간 무료','2024-04-30 16:15:00','y' ),
        ('123가5678','2시간 무료','2024-04-30 09:30:00','y' );
-	   
 ```
+
+```
+mk create secret generic finalpjt-secret --from-env-file=.env --namespace hello
+mk delete secret generic finalpjt-secret --namespace hello
+```
+
