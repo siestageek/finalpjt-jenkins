@@ -1,5 +1,14 @@
 # finalpjt-jenkins
 
+```ini
+DB_USERNAME=parkings
+DB_PASSWORD=parkings
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=parkings
+DATABASE_URL=mysql+pymysql://parkings:parkings@192.168.56.150:3306/parkings
+```
+
 ```sql
 CREATE USER 'username'@'%' IDENTIFIED BY 'password'; 
 GRANT ALL PRIVILEGES ON *.* TO 'username'@'%'; 
