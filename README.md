@@ -174,6 +174,18 @@ VALUES ('123가5678', '10% 할인', '2024-02-01 12:00:00', 'n'),
 ```
 
 ```
+sudo docker build -t siestageek/frontendapps:latest msa-frontend/.
+sudo docker build -t siestageek/discountapps:latest discount-service/.
+sudo docker build -t siestageek/memberapps:latest member-service/.
+sudo docker build -t siestageek/couponapps:latest coupon-service/.
+
+sudo docker push siestageek/frontendapps
+sudo docker push siestageek/discountapps
+sudo docker push siestageek/memberapps
+sudo docker push siestageek/couponapps
+```
+
+```
 mk create secret generic finalpjt-secret --from-env-file=.env --namespace hello
 mk delete secret generic finalpjt-secret --namespace hello
 ```
