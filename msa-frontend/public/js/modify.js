@@ -7,7 +7,7 @@ const modbtn = document.querySelector('#modifybtn');
 
 modbtn.addEventListener('click', async (event) => {
     event.preventDefault(); // 기본 이벤트 방지 추가
-    const res = await fetch('http://43.207.156.131:32324/users/modify', {
+    const res = await fetch('http://${window.env.API_URL}:32324/users/modify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
