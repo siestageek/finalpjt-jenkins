@@ -8,7 +8,7 @@ let schbtn = document.querySelector("#schbtn");
 
 // 입차 내역 검색 조회
 const findCarInfo = async (skey) => {
-    const res = await fetch(`http://43.207.156.131:32323/discount/${skey}`)
+    const res = await fetch(`http://${window.env.API_URL}:32323/discount/${skey}`)
     if (res.ok) {
         const data = await res.json()
         return data;
