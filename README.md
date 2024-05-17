@@ -47,6 +47,17 @@ CREATE TABLE coupon (
 	usec VARCHAR(3) DEFAULT 'n'
 );
 
+CREATE TABLE members (
+  mno int(11) NOT NULL AUTO_INCREMENT,
+  mid varchar(18) NOT NULL,
+  mpwd varbinary(128) NOT NULL,
+  mname varchar(20) NOT NULL,
+  pname varchar(40) NOT NULL,
+  regdate varchar(20) DEFAULT NULL,
+  PRIMARY KEY (mno),
+  UNIQUE KEY mid (mid)
+)
+
 INSERT INTO car (cno, pname, ent, ent_time, checks, exit_time, ptime, disc)
 VALUES
     ('123가5678', 'Owner-1', 'Entrance-1', '2024-05-01 08:00:00', 'Check-1', '2024-05-01 09:00:00', TIME_FORMAT(DATE_SUB('2024-05-01 09:00:00', INTERVAL TIMESTAMPDIFF(SECOND, '2024-05-01 08:00:00', '2024-05-01 09:00:00') SECOND), '%H:%i:%s'), 'Discount-1'),
