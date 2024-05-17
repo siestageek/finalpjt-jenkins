@@ -3,7 +3,7 @@ const loginbtn = document.querySelector('#loginbtn');
 
 
 const getUserInfo = async () => {
-  const res = await fetch('http://43.207.156.131:8010/users');
+  const res = await fetch('http://${window.env.API_URL}:8010/users');
   if (res.ok) {
       const data = await res.json();
       return data;
@@ -51,7 +51,7 @@ regbtn.addEventListener('click', async ()=> {
     const name = document.querySelector('#name');
     const email = document.querySelector('#email');
 
-    const res = await fetch('http://43.203.182.213:8010/users',
+    const res = await fetch('http://${window.env.API_URL}:8010/users',
         {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -77,7 +77,7 @@ loginbtn.addEventListener('click', async ()=> {
 
     const userid = document.querySelector('#uid');
     const passwd = document.querySelector('#pwd');
-    const res = await fetch('http://43.203.182.213:8010/login',
+    const res = await fetch('http://${window.env.API_URL}:8010/login',
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
