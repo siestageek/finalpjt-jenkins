@@ -1,7 +1,7 @@
 
 
 const getProductInfo = async () => {
-  const res = await fetch('http://43.207.156.131:8000/products');
+  const res = await fetch('http://${window.env.API_URL}:8000/products');
   if (res.ok) {
       const data = await res.json();
       return data;
